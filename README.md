@@ -1,3 +1,3 @@
-An unofficial Myriad Song module for Foundry VTT.
+An unofficial Myriad Song system module for Foundry VTT.
 
 Currently under development.
