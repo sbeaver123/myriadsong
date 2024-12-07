@@ -1,0 +1,35 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <div class="flexgrid">
+            <div class="gridrow">
+                <img src="{{img}}" data-edit="img" title="{{name}}" height="64" width="64"/>
+                <h1><input name="name" type="text" value="{{name}}"/></h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="sheet-content">
+        <table style="height: 100%;">
+            <tr>
+                <td>{{localize "MYRIADSONG.summary"}}</td>
+                <td>
+                    <textarea name="system.summary" class="summary">{{system.summary}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.cost"}}</td>
+                <td>
+                    <select name="system.cost">
+                        {{selectOptions config.giftCostSelect selected=system.cost localize=true}}
+                    </select>
+                </td>
+            </tr>
+            <tr style="height: 0;">
+                <td>{{localize "MYRIADSONG.description"}}</td>
+                <td>
+                    {{editor system.description target="system.description" button=false editable=editable owner=owner }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>

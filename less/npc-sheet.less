@@ -1,0 +1,133 @@
+
+.myriadsong.sheet.npc {
+
+    .window-content {
+        //background-color: white;
+        background-image: linear-gradient(to right, #fde2c5, #fefacd);
+        padding: 0px;
+    }
+
+    .sheet-header {
+        background-image: linear-gradient(to right, #fde2c5, #fefacd);
+        padding: 5px;
+        align-items: flex-start;
+
+        .img-box {
+            flex: 0 0 150px;
+            margin-top: 10px;
+
+            img {
+                width: 150px;
+                height: 155px;
+                object-fit: contain;
+                border: 0;
+            }
+        }
+
+        .name-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            margin-top: 0px;
+            flex-grow: 1;
+            padding: 10px;
+        }
+        
+        .name-field {
+            font-size: 2.6em;
+            margin-bottom: 15px;
+            padding: 20px 5px;
+        }
+
+        .desc-field {
+            font-size: 1.4em;
+            font-style: italic;
+            height: 40px;
+            margin-bottom: 15px;
+        }
+
+        .dicebutton {
+            font-size: 1.4em;
+            font-weight: bold;
+            background-color: rgb(121, 206, 121);
+            height: 50px;
+        }
+
+        .dicebutton:hover, .dicebutton:focus {
+            box-shadow: none;
+        }
+
+        input:hover, input:focus {
+            box-shadow: none;
+        }
+    }
+
+    .roll-box {
+        width: calc(100% - 30px);
+    }
+
+    .green-box {
+        border: 1px solid green;
+        background-color: white;
+    }   
+
+    .npc-sheet-content {
+        padding: 5px;
+        background-image: linear-gradient(to right, #fde2c5, #fefacd);
+    }
+
+    .npc-table {
+        //border: 1px solid var(--color-border-light-tertiary);
+
+        tr {
+            border: 2px solid rgb(197, 62, 197);
+        }
+        
+        td {
+            background-color: lightgreen;
+            padding: 5px;
+            font-size: 16px;
+
+            input {
+                background-color: white;
+            }
+
+            input:hover, input:focus {
+                box-shadow: none;
+            }
+
+            .small-box {
+                width: 30px;
+            }
+
+            .short-box {
+                width: 100px;
+            }
+        }
+
+        .label {
+            background-color: pink;
+            width: 20%;
+            padding: 5px;
+            font-size: 1.2em;
+        }
+
+        .horizontal-align-box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .attack-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        padding: 2px;
+    }
+}

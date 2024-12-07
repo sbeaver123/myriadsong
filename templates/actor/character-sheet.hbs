@@ -1,0 +1,29 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header heading-box">
+        <div class="img-box green-box"><img data-edit="img" src="{{img}}"/></div>
+        <div class="name-box">
+            <input class="green-box name-field" name="name" type="text" value="{{name}}"/>
+            <div class="diceroller">
+                <button id="diceroller" class="dicebutton" type="button">Dice Roller</button>
+            </div>
+        </div>
+        <img class="logo" src="./systems/myriadsong/assets/MyriadSongLogo.png"/>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item tab-label" data-tab="profile">{{localize "MYRIADSONG.profile"}}</a>
+        <a class="item tab-label" data-tab="skills">{{localize "MYRIADSONG.skills"}}</a>
+        <a class="item tab-label" data-tab="gifts">{{localize "MYRIADSONG.gifts"}}</a>
+        <a class="item tab-label" data-tab="battlearray">{{localize "MYRIADSONG.battlearray"}}</a>
+    </nav>
+
+    <section class="sheet-body body-margin">
+        {{> "systems/myriadsong/templates/actor/profile-tab.hbs"}}
+
+        {{> "systems/myriadsong/templates/actor/skills-tab.hbs"}}
+
+        {{> "systems/myriadsong/templates/actor/gifts-tab.hbs"}}
+
+        {{> "systems/myriadsong/templates/actor/battlearray-tab.hbs"}}
+    </section>
+</form>

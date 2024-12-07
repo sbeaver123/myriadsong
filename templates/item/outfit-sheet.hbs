@@ -1,0 +1,40 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{img}}" data-edit="img" title="{{name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{name}}"/></h1>
+    </header>
+
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <td class="quarter">{{localize "MYRIADSONG.armourdice"}}</td>
+                <td><input type="text" name="system.armour" value="{{system.armour}}"/></td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.skillbonuses"}}</td>
+                <td><input type="text" name="system.bonuses" value="{{system.bonuses}}"/></td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.descriptors"}}</td>
+                <td>
+                    <div class="flexgrid">
+                        <div class="gridrow">
+                            {{#each descriptors as |descriptor idx|}}
+                            <div class="effectbox">
+                                {{descriptor.label}}
+                                <input class="checkdescriptor" type="checkbox" name="{{descriptor.name}}" {{descriptor.checked}}/>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.description"}}</td>
+                <td>
+                    <textarea name="system.description" class="textbox">{{system.description}}</textarea>
+                </td>
+            </tr>
+        </table>
+    </div>        
+</form>    

@@ -1,0 +1,14 @@
+<div class="dice-roll-results">
+    <h3>{{label}}</h3>
+    <div class="dice-successes">{{localize "MYRIADSONG.successes"}}&nbsp;&nbsp;{{successes}}</div>
+    {{#if botch}}
+    <div class="botch">{{localize "MYRIADSONG.botch"}}</div>
+    {{/if}}
+    <div class="dice-results">
+        {{#each diceData as |die|}}
+            <a class="reroll" data-idx="{{die.idx}}">
+                <div class="die {{die.type}} {{die.success}}">{{die.result}}</div>
+            </a>
+        {{/each}}
+    </div>
+</div>

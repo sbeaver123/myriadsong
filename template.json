@@ -1,0 +1,227 @@
+{
+    "Actor": {
+        "types": ["character", "npc"],
+        "templates": {
+            "traits": {
+                "body": 0,
+                "speed": 0,
+                "mind": 0,
+                "will": 0,
+                "legacy": 0,
+                "career": 0
+            },
+            "profile": {
+                "personality": "",
+                "legacy": "",
+                "upbringing": "",
+                "career": ""
+            },
+            "attack": {
+                "weapon": "",
+                "threat": "",
+                "strike": "",
+                "dice": "",
+                "effect": "",
+                "notes": ""
+            },
+            "gift": {
+                "name": "",
+                "type": "",
+                "description": "",
+                "recharge": ""
+            },
+            "battle": {
+                "battlearray": {
+                    "initiative": "",
+                    "stride": "",
+                    "dash": "",
+                    "scramble": "",
+                    "run": "",
+                    "dodge": "",
+                    "soak": "",
+                    "rally": ""
+                }
+            },
+            "skilllist": {
+                "skills": {
+                    "academics": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "athletics": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "craft": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "deceit": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "endurance": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "evasion": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "fighting": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "negotiation": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "observation": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "presence": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "psyche": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "questioning": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "shooting": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "tactics": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    },
+                    "transport": {
+                        "favourite": "",
+                        "marks": "",
+                        "marksDice": "",
+                        "legacyDice": "",
+                        "careerDice": ""
+                    }
+                }
+            },
+            "damagearray": {
+                "damage": {
+                    "reeling": "",
+                    "hurt": "",
+                    "panicked": "",
+                    "injured": "",
+                    "dying": "",
+                    "dead": "",
+                    "overkill": ""
+                }
+            }
+        },
+        "character": {
+            "templates": ["traits", "profile", "battle", "skilllist", "damagearray"],
+            "portrait": "",
+            "goals": {
+                "goal1": "",
+                "goal2": "",
+                "goal3": ""
+            },
+            "money": 0,
+            "combatsavegift": false,
+            "personalitygift": false,
+            "gifts": []
+        },
+        "npc": {
+            "templates": ["battle", "damagearray"],
+            "traits": "",
+            "size": "",
+            "gifts": [],
+            "skills": "",
+            "counter": {
+                "description": "",
+                "formula": ""
+            },
+            "dodge": {
+                "description": ""
+            },
+            "soak": {
+                "description": ""
+            }
+        }
+    },
+    "Item": {
+        "types": ["gift","outfit","weapon", "npcounter"],
+        "gift": {
+            "summary": "",
+            "description": "",
+            "cost": "",
+            "check": ""
+        },
+        "outfit": {
+            "armour": "",
+            "bonuses": "",
+            "description": "",
+            "descriptors": []
+        },
+        "weapon": {
+            "threat": "",
+            "strike": "",
+            "dice": "",
+            "pool": "",
+            "damage": "",
+            "functionDice": {
+                "number": "",
+                "die": "",
+                "effect": ""
+            },
+            "effects": [],
+            "descriptors": [],
+            "notes": ""
+        }
+    }
+}

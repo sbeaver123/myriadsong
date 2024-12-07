@@ -1,0 +1,57 @@
+<div class="tab attributes" data-group="primary" data-tab="gifts">
+    <div class="heading-box">
+        <span class="heading">Gifts</span></div>
+        <div class="indent-box">
+        <table class="gifts-table item-list">
+            <tr>
+                <th class="name">{{localize "MYRIADSONG.name"}}</th>
+                <th>Description</th>
+                <th class="cost">Cost/Recharge</th>
+                <th class="cb"></th>
+                <th class="cb"></th>
+            </tr>
+            <tr class="item" data-item-id="combatsavegift">
+                <td class="name">{{localize "MYRIADSONG.combatsave"}}</td>
+                <td>{{localize "MYRIADSONG.gift.combatsave"}}</td>
+                <td class="centre">{{localize "MYRIADSONG.giftcost.rest"}}</td>
+                <td>
+                    <input class="gift-check" type="checkbox" name="combatsavegift"
+                        {{#if (eq system.combatsavegift true)}}checked{{/if}}/>
+                </td>
+            </tr>
+            <tr class="item" data-item-id="personalitygift">
+                <td class="name">{{localize "MYRIADSONG.personality"}}: {{system.personality}}</td>
+                <td>{{localize "MYRIADSONG.gift.personality"}}</td>
+                <td class="centre">{{localize "MYRIADSONG.giftcost.rest"}}</td>
+                <td>
+                    <input class="gift-check" type="checkbox" name="personalitygift"
+                        {{#if (eq system.personalitygift true)}}checked{{/if}}/>
+                </td>
+            </tr>
+            {{#each gifts as |gift giftId|}}
+            <tr class="item" data-item-id="{{gift.id}}">
+                <td class="name">{{gift.name}}</td>
+                <td class="toggle">
+                    {{{system.summary}}}<br/>
+                </td>
+                <td class="centre">{{gift.system.costString}}</td>
+                <td>
+                    <input class="gift-check" type="checkbox" name="{{gift.system.check}}"
+                        {{#if (eq gift.system.check true)}}checked{{/if}}/>
+                </td>
+                <td>
+                    <a class="item-edit" data-type="gift">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a class="item-delete" data-type="gift">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+        <div>
+            <a class="item-create" data-type="gift" title='{{localize "MYRIADSONG.addgift"}}'><i class="fas fa-plus"></i></a>
+        </div>
+    </div>
+</div>

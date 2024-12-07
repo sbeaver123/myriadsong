@@ -1,0 +1,112 @@
+<form autocomplete="off">
+    <div>
+        <div class="dice-box">
+            <div class="dice-box-row">
+                <span class="dice-label">{{localize "MYRIADSONG.rolllabel"}}</span>
+                &nbsp;
+                <input type="text" class="label" name="label" value="{{label}}"/>
+            </div>
+            <div class="dice-box-row">
+                <table class="pool-table">
+                    <caption class="table-caption">{{localize "MYRIADSONG.dice-pool"}}</caption>
+                    <tr>
+                        <td><i class="increase fas fa-circle-up" data-die="d4"></i></td>
+                        <td><i class="increase fas fa-circle-up" data-die="d6"></i></td>
+                        <td><i class="increase fas fa-circle-up" data-die="d8"></i></td>
+                        <td><i class="increase fas fa-circle-up" data-die="d10"></i></td>
+                        <td><i class="increase fas fa-circle-up" data-die="d12"></i></td>
+                    </tr>
+                    <tr>
+                        <td>D4: <span class="blue">{{diceroller.dicepool.d4}}</span></td>
+                        <td>D6: <span class="blue">{{diceroller.dicepool.d6}}</span></td>
+                        <td>D8: <span class="blue">{{diceroller.dicepool.d8}}</span</td>
+                        <td>D10: <span class="blue">{{diceroller.dicepool.d10}}</span></td>
+                        <td>D12: <span class="blue">{{diceroller.dicepool.d12}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><i class="decrease fas fa-circle-down" data-die="d4"></i></td>
+                        <td><i class="decrease fas fa-circle-down" data-die="d6"></i></td>
+                        <td><i class="decrease fas fa-circle-down" data-die="d8"></i></td>
+                        <td><i class="decrease fas fa-circle-down" data-die="d10"></i></td>
+                        <td><i class="decrease fas fa-circle-down" data-die="d12"></i></td>
+                    </tr>
+                </table>
+            </div>    
+
+            <div class="dice-box-row">
+                <table class="pool-table">
+                    <tr>
+                        <td><button type="button" class="attr-button" data-attr="body">
+                            {{localize "MYRIADSONG.trait.body"}}
+                        </button>
+                        </td>
+                        <td><button type="button" class="attr-button" data-attr="speed">
+                            {{localize "MYRIADSONG.trait.speed"}}
+                        </button>
+                        </td>
+                        <td><button type="button" class="attr-button" data-attr="mind">
+                            {{localize "MYRIADSONG.trait.mind"}}
+                        </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="attr-button" data-attr="will">
+                            {{localize "MYRIADSONG.trait.will"}}
+                        </button>
+                        </td>
+                        <td><button type="button" class="attr-button" data-attr="legacy">
+                            {{localize "MYRIADSONG.trait.legacy"}}
+                        </button>
+                        </td>
+                        <td><button type="button" class="attr-button" data-attr="career">
+                            {{localize "MYRIADSONG.trait.career"}}
+                        </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="dice-box-row">
+                <table class="function-table">
+                    <caption class="table-caption">{{localize "MYRIADSONG.function-dice"}}</caption>
+                    <tr>
+                        <td><i class="increase-func fas fa-circle-up"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="diecount">
+                            <select name="diceroller.functionDice.die" class="function-die">
+                                {{selectOptions config.diceSelect selected=diceroller.functionDice.die localize=true}}
+                            </select>
+                            : <span class="blue">{{diceroller.functionDice.number}}</span>
+                        </td>
+                        <td>
+                            <select name="diceroller.functionDice.effect" class="function-effect">
+                                {{selectOptions config.functionSelect selected=diceroller.functionDice.effect localize=true}}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="decrease-func fas fa-circle-down"></i></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="dice-box-row" style="font-size: 1.2em;">
+                <span class="dice-label">{{localize "MYRIADSONG.difficulty"}}</span>
+                &nbsp;
+                <input type="text" class="number-box difficulty" name="diceroller.difficulty"
+                     value="{{diceroller.difficulty}}"/>
+                &nbsp;&nbsp;     
+                <span class="dice-label">{{localize "MYRIADSONG.favourite-use"}}</span>
+                <input type="checkbox" class="favuse" name="diceroller.favouriteuse"/>
+            </div>
+    
+            <div class="dice-box-row"><br/></div>
+
+            <div class="dice-box-row">
+                <button class="dice-box-button clear" type="button">Clear</button>
+                <button class="dice-box-button roll" type="button">Roll</button>
+            </div>
+        </div>
+    </div>
+</form>

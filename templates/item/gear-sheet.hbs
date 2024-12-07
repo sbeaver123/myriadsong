@@ -1,0 +1,14 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <div class="flexgrid">
+            <div class="gridrow">
+                <img src="{{img}}" data-edit="img" title="{{name}}" height="64" width="64"/>
+                <h1><input name="name" type="text" value="{{name}}"/></h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="sheet-content">
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+    </div>
+</form>

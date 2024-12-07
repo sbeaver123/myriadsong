@@ -1,0 +1,76 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{img}}" data-edit="img" title="{{name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{name}}"/></h1>
+    </header>
+
+    <div class="sheet-content">
+        <table>
+            <tr>
+                <td>{{localize "MYRIADSONG.threat"}}</td>
+                <td><input type="text" class="shortbox" name="system.threat" value="{{system.threat}}"/></td>
+            </tr>
+            <tr>
+                <td>Strike</td>
+                <td><input type="text" class="shortbox" name="system.strike" value="{{system.strike}}"/></td>
+            </tr>
+            <tr>
+                <td>Dice</td>
+                <td><input type="text" name="system.dice" value="{{system.dice}}"/></td>
+            </tr>
+            <tr>
+                <td>Damage</td>
+                <td><input type="text" name="system.damage" value="{{system.damage}}"/></td>
+            </tr>
+            <tr>
+                <td>Function Dice</td>
+                <td>
+                    <input type="text" style="width: 30px;"
+                        name="system.functionDice.number" value="{{system.functionDice.number}}"/>
+                    &nbsp;
+                    <select name="system.functionDice.die" class="function-die">
+                        {{selectOptions config.diceSelect selected=system.functionDice.die localize=true}}
+                    </select>
+                    &nbsp;
+                    <select name="system.functionDice.effect" class="function-effect">
+                        {{selectOptions config.functionSelect selected=system.functionDice.effect localize=true}}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Effects</td>
+                <td>
+                    <div class="flexgrid">
+                        <div class="gridrow">
+                            {{#each effects as |effect idx|}}
+                            <div class="effectbox">
+                                {{effect.label}}
+                                <input class="checkeffect" type="checkbox" name="{{effect.name}}" {{effect.checked}}/>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.descriptors"}}</td>
+                <td>
+                    <div class="flexgrid">
+                        <div class="gridrow">
+                            {{#each descriptors as |descriptor idx|}}
+                            <div class="effectbox">
+                                {{descriptor.label}}
+                                <input class="checkdescriptor" type="checkbox" name="{{descriptor.name}}" {{descriptor.checked}}/>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>{{localize "MYRIADSONG.description"}}</td>
+                <td><textarea name="system.description" class="textbox">{{system.description}}</textarea></td>
+            </tr>
+        </table>
+    </div>
+</form>
