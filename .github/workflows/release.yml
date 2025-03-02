@@ -1,0 +1,20 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Zipfile
+        run: zip -r myriad-song.zip ./ -x ".git/*" ".gitignore" ".vscode/*" "less/*" ".github/*" "gulpfile.js"
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "system.json, myriad-song.zip"
+

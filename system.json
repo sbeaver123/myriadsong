@@ -5,7 +5,7 @@
     "authors": [
         {"name": "Simon Beaver"}
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "compatibility": {
         "minimum": "12.324",
         "verified": "12.324"
@@ -22,5 +22,8 @@
             "name": "English",
             "path": "lang/en.json"
         }
-    ]
+    ],
+    "url": "https://github.com/sbeaver123/myriadsong",
+    "manifest": "https://github.com/sbeaver123/myriadsong/releases/download/v1.0.1/system.json",
+    "download": "https://github.com/sbeaver123/myriadsong/releases/download/v1.0.1/myriad-song.zip"
 }
